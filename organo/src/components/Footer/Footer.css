@@ -1,0 +1,31 @@
+#footer{
+    background-image: url(../../../public/imgs/fundo.png);
+    background-color: #6278F7;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: row;
+    padding: 20px 0;
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin: auto 0;
+}
+
+.credits {
+    margin: auto 0;
+    color: #fff;
+}
+
+.credits a {
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-footer img {
+    max-width: 150px;
+}

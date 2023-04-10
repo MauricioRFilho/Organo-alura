@@ -6,13 +6,16 @@ import { useState } from 'react'
 import './Formulario.css'
 
 const Formulario = (props) =>{
-    const cargos = ['anjo', 'adm', 'Chitão', 'Estudantes', 'Bots', 'Maligno','@everyone' ]
    
     const Salvar = (evento)=>{
         evento.preventDefault()
         props.onSave({
             nome,apelido,imagem,cargo
         })
+        setNome('')
+        setApelido('')
+        setImagem('')
+        setCargo('')
     }
 
     const [nome, setNome] = useState('')
@@ -47,7 +50,7 @@ const Formulario = (props) =>{
                 req="true"
                 label="Cargo"
                 valor={cargo}
-                itens={cargos}
+                itens={props.cargos} //aqui mudamos a lista com map
                 aoAlterado = {valor => setCargo(valor)}  />
                 <Botao>
                     Criar Card    
